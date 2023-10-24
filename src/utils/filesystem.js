@@ -671,7 +671,7 @@ class Filesystem {
 
       // node-local devices cannot be rescanned, so ignore
       if (await filesystem.pathExists(sys_file)) {
-        console.log(`executing filesystem command: echo 1 > ${sys_file}`);
+        //console.log(`executing filesystem command: echo 1 > ${sys_file}`);
         fs.writeFileSync(sys_file, "1");
       }
     }
@@ -956,7 +956,7 @@ class Filesystem {
         .trim()
         .replace(/\n/, "\\n");
     }
-    console.log("executing filesystem command: %s", command_log);
+    //console.log("executing filesystem command: %s", command_log);
 
     return new Promise((resolve, reject) => {
       const child = filesystem.options.executor.spawn(command, args, options);

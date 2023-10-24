@@ -406,7 +406,7 @@ class Mount {
       "redacted"
     );
 
-    console.log("executing mount command: %s", cleansedLog);
+    //console.log("executing mount command: %s", cleansedLog);
 
     return new Promise((resolve, reject) => {
       const child = mount.options.executor.spawn(command, args, options);
